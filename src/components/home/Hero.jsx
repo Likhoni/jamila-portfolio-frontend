@@ -97,7 +97,7 @@ export default function Hero({ profile }) {
               {bio.slice(0, 220)}...
             </p>
 
-            {/* 2 CTAs (Section 9.1) */}
+            {/* Call to action buttons */}
             <div
               style={{
                 display: 'flex',

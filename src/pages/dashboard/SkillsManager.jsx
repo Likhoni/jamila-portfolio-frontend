@@ -232,7 +232,7 @@ export default function SkillsManager() {
             value={formData.proficiency}
             onChange={(e) => setFormData({ ...formData, proficiency: parseInt(e.target.value, 10) || 0 })}
             error={fieldErrors.proficiency}
-            helperText="Between 1 and 100 percent (B-21)"
+            helperText="Enter a value between 1 and 100"
           />
 
           <Input

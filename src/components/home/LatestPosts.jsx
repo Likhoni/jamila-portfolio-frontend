@@ -7,7 +7,7 @@ import Button from '../ui/Button';
 import { formatDate } from '../../utils/formatDate';
 
 export default function LatestPosts({ posts = [] }) {
-  // Exactly 3 cards (Section 9.1)
+  // Display latest articles
   const latest = posts.slice(0, 3);
 
   return (

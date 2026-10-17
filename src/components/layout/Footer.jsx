@@ -27,10 +27,10 @@ export default function Footer({ profile }) {
           {/* Brand Info */}
           <div>
             <h3 style={{ fontSize: 'var(--text-xl)', marginBottom: 'var(--space-16)' }}>
-              {profile?.full_name || 'DevFolio'}
+              {profile?.full_name || 'Jamila Islam Likhoni'}
             </h3>
             <p style={{ fontSize: 'var(--text-sm)', color: 'var(--text-secondary)', maxWidth: '320px' }}>
-              {profile?.headline || 'Full-Stack Developer & Cloud Architect.'}
+              {profile?.headline || 'Software Engineer | Laravel & Backend Developer'}
             </p>
             {profile?.location && (
               <p style={{ fontSize: 'var(--text-xs)', color: 'var(--text-muted)', marginTop: 'var(--space-8)' }}>
@@ -167,7 +167,7 @@ export default function Footer({ profile }) {
             © {currentYear} {profile?.full_name || 'Jamila Islam Likhoni'}. All rights reserved. Built with React & Django REST Framework.
           </div>
           <div style={{ display: 'flex', gap: 'var(--space-16)' }}>
-            <span>Direction D: Soft Modern Gradient</span>
+            <span>Full-Stack Web Application</span>
             <span>•</span>
             <span>REST API Powered</span>
           </div>

@@ -9,7 +9,7 @@ export default function LikeButton({ slug, isLiked = false, likesCount = 0 }) {
 
   const likeMutation = useMutation({
     mutationFn: () => postsApi.toggleLike(slug),
-    // Optimistic UI update (F-9)
+    // Optimistic UI update
     onMutate: async () => {
       await queryClient.cancelQueries({ queryKey: ['post', slug] });
       const previousPost = queryClient.getQueryData(['post', slug]);

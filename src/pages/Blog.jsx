@@ -28,7 +28,7 @@ export default function Blog() {
     document.title = 'Engineering Blog & Technical Insights — Jamila Islam Likhoni';
   }, []);
 
-  // Sync debounced search to URL query string (F-8)
+  // Sync debounced search to URL query string
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
     if (debouncedSearch) {
@@ -80,7 +80,7 @@ export default function Blog() {
     },
   });
 
-  // Blog Posts Query with 6 items per page (B-18)
+  // Blog Posts Query with pagination
   const {
     data,
     isLoading,
@@ -104,7 +104,7 @@ export default function Blog() {
 
   const posts = data?.results || [];
   const totalCount = data?.count || 0;
-  const totalPages = Math.ceil(totalCount / 6); // 6 per page (B-18)
+  const totalPages = Math.ceil(totalCount / 6);
 
   return (
     <PageContainer>
@@ -126,7 +126,7 @@ export default function Blog() {
       {/* Main Blog Grid */}
       <section className="section" style={{ background: 'var(--bg-primary)' }}>
         <div className="container">
-          {/* Post Filters Bar (F-8) */}
+          {/* Post Filters Bar */}
           <PostFilters
             search={searchInput}
             onSearchChange={setSearchInput}
@@ -141,7 +141,7 @@ export default function Blog() {
             onClearFilters={handleClearFilters}
           />
 
-          {/* 4 States (F-7): Loading, Error, Empty, Success */}
+          {/* Loading, Error, Empty, and Success States */}
           {isLoading ? (
             <div
               style={{
@@ -197,7 +197,7 @@ export default function Blog() {
                 ))}
               </div>
 
-              {/* 6 posts per page pagination (B-18) */}
+              {/* Pagination */}
               <Pagination
                 currentPage={pageParam}
                 totalPages={totalPages}

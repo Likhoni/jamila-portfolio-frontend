@@ -7,7 +7,7 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Restore session on app start without flashing login or admin UI (F-2)
+  // Restore session on app start without flashing login or admin UI
   useEffect(() => {
     async function restoreSession() {
       const accessToken = localStorage.getItem('access_token');

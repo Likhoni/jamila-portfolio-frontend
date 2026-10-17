@@ -4,7 +4,7 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('devfolio_theme');
+    const savedTheme = localStorage.getItem('portfolio_theme');
     if (savedTheme) {
       return savedTheme;
     }
@@ -16,7 +16,7 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('devfolio_theme', theme);
+    localStorage.setItem('portfolio_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

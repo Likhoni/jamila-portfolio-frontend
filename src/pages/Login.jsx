@@ -17,11 +17,11 @@ export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Redirect target after login (F-3)
+  // Redirect target after login
   const from = location.state?.from?.pathname || '/dashboard';
 
   useEffect(() => {
-    document.title = 'Owner Authentication — DevFolio';
+    document.title = 'Studio Login — Jamila Islam Likhoni';
   }, []);
 
   // If already authenticated, redirect immediately
@@ -31,7 +31,7 @@ export default function Login() {
     }
   }, [isOwner, loading, navigate, from]);
 
-  // Prevent flashing login page while session restore is in flight (F-2)
+  // Prevent flashing login page while session restore is in flight
   if (loading) {
     return (
       <div
@@ -70,7 +70,7 @@ export default function Login() {
       toast.success('Welcome back, owner!');
       navigate(from, { replace: true });
     } catch (err) {
-      // B-14: Login must fail with 401 for wrong password and must not reveal whether username exists
+      // Non-revealing error message
       const msg = err.response?.data?.detail || 'Invalid credentials.';
       setErrorMsg(msg);
       toast.error(msg);

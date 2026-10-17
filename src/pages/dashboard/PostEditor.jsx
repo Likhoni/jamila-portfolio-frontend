@@ -190,7 +190,7 @@ export default function PostEditor() {
             value={formData.title}
             onChange={(e) => setFormData({ ...formData, title: e.target.value })}
             error={fieldErrors.title}
-            helperText="At least 5 characters required (B-21)"
+            helperText="At least 5 characters required"
           />
 
           {/* Excerpt */}
@@ -271,7 +271,7 @@ export default function PostEditor() {
             </div>
           </div>
 
-          {/* Cover Image Uploader with Live Preview (F-12) */}
+          {/* Cover Image Uploader with Live Preview */}
           <ImageUploader
             label="Cover Image (16:9 ratio, max 2MB)"
             currentImageUrl={existingPost?.cover_image_url}

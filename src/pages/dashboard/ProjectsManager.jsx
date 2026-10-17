@@ -330,7 +330,7 @@ export default function ProjectsManager() {
               value={formData.live_url}
               onChange={(e) => setFormData({ ...formData, live_url: e.target.value })}
               error={fieldErrors.live_url}
-              helperText="At least one of Live URL or GitHub URL is required (B-21)"
+              helperText="At least one of Live URL or GitHub URL is required"
             />
 
             <Input

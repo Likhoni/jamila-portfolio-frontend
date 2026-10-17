@@ -262,7 +262,7 @@ export default function PostsList() {
         }}
       />
 
-      {/* Confirmation Modal for Delete (F-12) */}
+      {/* Confirmation Modal for Delete */}
       <ConfirmModal
         isOpen={Boolean(deleteTarget)}
         onClose={() => setDeleteTarget(null)}

@@ -21,7 +21,7 @@ export default function CommentForm({ slug, parentId = null, onCancelReply }) {
   const commentMutation = useMutation({
     mutationFn: (data) => postsApi.createComment(slug, { ...data, parent: parentId }),
     onSuccess: (res) => {
-      // F-10: After posting, show "Your comment is awaiting approval" - do not pretend it was published!
+      // Display moderation notice to visitor
       setSubmittedMessage(res.data?.message || 'Your comment is awaiting approval.');
       setFormData({ name: '', email: '', website: '', content: '' });
       setFieldErrors({});

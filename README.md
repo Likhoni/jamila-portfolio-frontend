@@ -1,4 +1,4 @@
-# DevFolio — Senior Full-Stack Engineer Portfolio & Studio (Frontend)
+# Jamila Islam Likhoni — Full-Stack Engineer Portfolio & Studio (Frontend)
 
 > A modern, responsive developer portfolio and content management studio engineered with **React 18**, **Vite**, **TanStack React Query**, and **Axios**. Built to pair seamlessly with the Django REST Framework backend.
 
@@ -6,7 +6,7 @@
 
 ## 🎨 Visual Aesthetics & Design System
 
-This frontend implements **Direction D: Soft Modern Gradient**, a modern aesthetic characterized by:
+This frontend implements a modern design system characterized by:
 - **Subtle Glassmorphic Layering**: Translucent card backdrops (`rgba(255, 255, 255, 0.72)` light / `rgba(30, 41, 59, 0.75)` dark) with `backdrop-filter: blur(16px)`.
 - **Soft Indigo/Violet Gradients**: Vibrant accent gradients (`linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%)`).
 - **Mathematical 8px Spacing Scale**: Strict grid using `8 / 16 / 24 / 32 / 48 / 64 / 96 px`.
@@ -31,19 +31,19 @@ This frontend implements **Direction D: Soft Modern Gradient**, a modern aesthet
 
 ## ⚡ Key Features
 
-1. **Zero Hardcoded Content (`F-1`)**:
+1. **Zero Hardcoded Content**:
    - Every piece of biographical data, skill bar, experience timeline, project card, blog post, and comment is dynamically retrieved from the DRF API.
-2. **Visitor Privacy & Access Control (`Section 0`)**:
-   - Public visitors **never** see login links, sign-up forms, or admin dashboard links in the navigation bar.
+2. **Visitor Privacy & Access Control**:
+   - Public visitors never see login links, sign-up forms, or admin dashboard links in the navigation bar.
    - The Studio Dashboard is accessible only via the direct `/login` route by the authenticated owner.
-3. **Resilient Session & JWT Rotation (`F-10`)**:
+3. **Resilient Session & JWT Rotation**:
    - Access tokens stored in memory/session; refresh tokens trigger silent renewal via Axios response interceptors on `401 Unauthorized` without redirect loops.
-4. **Optimistic UI with Automatic Rollback (`F-8`)**:
+4. **Optimistic UI with Automatic Rollback**:
    - Post "Like" button updates count and active state immediately on click. If the network or API fails, TanStack Query reverts the UI state and notifies the user with a toast.
-5. **Threaded Comments & Moderation Feedback (`F-9`)**:
+5. **Threaded Comments & Moderation Feedback**:
    - Public visitors submit comments and receive instant notification: *"Your comment is submitted and pending moderation."*
    - Nested replies (1-level deep) with author attribution.
-6. **URL Synchronized Query Filters (`F-7`)**:
+6. **URL Synchronized Query Filters**:
    - Blog search, category selection, and tag filtering synchronize with browser search params (`?category=backend&search=django`), supporting shareable deep links.
 7. **Responsive Breakpoints**:
    - Hand-crafted layout adaptations across **1280px** (Desktop), **1024px** (Tablet Landscape), **768px** (Tablet Portrait / Hamburger Menu), and **480px** (Mobile devices).
@@ -152,7 +152,7 @@ portfolio-frontend/
 │   │   ├── AppRoutes.jsx            # Route tree definitions
 │   │   └── ProtectedRoute.jsx       # Owner-only route guard
 │   ├── styles/
-│   │   └── tokens.css               # Design tokens (Direction D)
+│   │   └── tokens.css               # Design tokens & color system
 │   └── utils/
 │       └── formatDate.js            # Relative and formatted date helpers
 ```

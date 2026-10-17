@@ -71,7 +71,7 @@ export default function Navbar({ profile }) {
               boxShadow: 'var(--shadow-sm)',
             }}
           >
-            {profile?.full_name ? profile.full_name.charAt(0) : 'D'}
+            {profile?.full_name ? profile.full_name.charAt(0) : 'J'}
           </div>
           <span
             style={{
@@ -81,7 +81,7 @@ export default function Navbar({ profile }) {
               color: 'var(--text-primary)',
             }}
           >
-            {profile?.full_name || 'DevFolio'}
+            {profile?.full_name || 'Jamila Islam Likhoni'}
           </span>
         </Link>
 

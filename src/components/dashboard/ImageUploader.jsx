@@ -15,7 +15,7 @@ export default function ImageUploader({
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Validate size (max 2MB per B-21)
+    // Validate size (max 2MB)
     if (file.size > 2 * 1024 * 1024) {
       toast.error('Image exceeds maximum allowed size of 2MB.');
       return;

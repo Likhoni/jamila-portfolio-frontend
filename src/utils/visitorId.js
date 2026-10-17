@@ -1,8 +1,8 @@
 /**
- * Retrieves or generates a persistent visitor UUID stored in localStorage (B-10, F-5)
+ * Retrieves or generates a persistent visitor UUID stored in localStorage
  */
 export function getOrCreateVisitorId() {
-  const STORAGE_KEY = 'devfolio_visitor_id';
+  const STORAGE_KEY = 'portfolio_visitor_id';
   let visitorId = localStorage.getItem(STORAGE_KEY);
   if (!visitorId) {
     if (typeof crypto !== 'undefined' && crypto.randomUUID) {

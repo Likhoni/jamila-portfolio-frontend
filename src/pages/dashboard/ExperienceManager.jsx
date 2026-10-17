@@ -90,7 +90,7 @@ export default function ExperienceManager() {
       setExpModalOpen(false);
     },
     onError: (err) => {
-      // F-13: Server errors are shown, never swallowed
+      // Server validation errors display
       if (err.response?.data) {
         setExpErrors(err.response.data);
       } else {
@@ -390,7 +390,7 @@ export default function ExperienceManager() {
         />
       )}
 
-      {/* Experience Form Modal (B-21, F-13) */}
+      {/* Experience Form Modal */}
       <Modal
         isOpen={expModalOpen}
         onClose={() => setExpModalOpen(false)}
@@ -469,7 +469,7 @@ export default function ExperienceManager() {
                 required={!expForm.is_current}
                 value={expForm.end_date}
                 onChange={(e) => setExpForm({ ...expForm, end_date: e.target.value })}
-                error={expErrors.end_date} // F-13: inline error display
+                error={expErrors.end_date}
               />
             )}
           </div>

@@ -17,7 +17,7 @@ import { projectsApi } from '../api/projects';
 import { postsApi } from '../api/posts';
 
 export default function Home() {
-  // Dynamic Document Title and SEO (F-16)
+  // Dynamic Document Title and SEO
   useEffect(() => {
     document.title = 'Jamila Islam Likhoni — Software Engineer & Laravel Developer';
   }, []);
@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <PageContainer>
-      {/* 1. Hero (Section 9.1) */}
+      {/* 1. Hero */}
       <Hero profile={profile} />
 
       {/* 2. About Preview */}

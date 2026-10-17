@@ -40,7 +40,7 @@ export default function Contact() {
       toast.success('Your message has been sent successfully!');
     },
     onError: (err) => {
-      // F-11: Friendly message on throttle (429)
+      // Handle rate limit error gracefully
       if (err.response?.status === 429) {
         toast.error('Too many attempts, please try later.');
         setFieldErrors({ non_field_errors: 'Too many attempts, please try later.' });
@@ -88,7 +88,7 @@ export default function Contact() {
             }}
             className="contact-layout"
           >
-            {/* Left: Contact Form or Success State (F-11) */}
+            {/* Left: Contact Form or Success State */}
             <div>
               {submitted ? (
                 <div

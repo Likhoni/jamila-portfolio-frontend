@@ -141,11 +141,11 @@ export default function ProfileSettings() {
     const file = e.target.files?.[0];
     if (!file) return;
     if (file.type !== 'application/pdf') {
-      toast.error('Resume must be a PDF file (B-21).');
+      toast.error('Resume must be a PDF file.');
       return;
     }
     if (file.size > 5 * 1024 * 1024) {
-      toast.error('Resume PDF must not exceed 5MB (B-21).');
+      toast.error('Resume PDF must not exceed 5MB.');
       return;
     }
     setResumeFile(file);

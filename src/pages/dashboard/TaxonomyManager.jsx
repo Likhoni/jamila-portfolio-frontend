@@ -91,7 +91,7 @@ export default function TaxonomyManager() {
     },
   });
 
-  // Delete Category (B-21: Handles ProtectedError gracefully)
+  // Delete Category (Handles protected foreign key errors gracefully)
   const deleteCatMutation = useMutation({
     mutationFn: (slug) => taxonomyApi.deleteCategory(slug),
     onSuccess: () => {
@@ -101,7 +101,7 @@ export default function TaxonomyManager() {
       setDeleteCatTarget(null);
     },
     onError: (err) => {
-      // B-21: Category in use by a post cannot be deleted -> return 400 with a readable message
+      // Category in use cannot be deleted
       const detail = err.response?.data?.detail || 'Cannot delete this category because it is currently linked to published blog posts.';
       toast.error(detail, { duration: 5000 });
       setDeleteCatTarget(null);

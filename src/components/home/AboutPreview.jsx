@@ -37,7 +37,7 @@ export default function AboutPreview({ profile }) {
               Engineering Scalable Systems with Precision
             </h2>
 
-            {/* 3–5 lines from Profile.bio (Section 9.1) */}
+            {/* Bio summary */}
             <p
               style={{
                 fontSize: 'var(--text-base)',

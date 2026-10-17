@@ -60,7 +60,7 @@ export default function Projects() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Fetch projects via TanStack React Query (F-6)
+  // Fetch projects via TanStack React Query
   const {
     data,
     isLoading,
@@ -83,7 +83,7 @@ export default function Projects() {
 
   const projects = data?.results || [];
   const totalCount = data?.count || 0;
-  const totalPages = Math.ceil(totalCount / 9); // B-18: 9 per page
+  const totalPages = Math.ceil(totalCount / 9);
 
   const categories = [
     { label: 'All Projects', value: '' },
@@ -190,7 +190,7 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* 4 States (F-7): Loading, Error, Empty, Success */}
+          {/* Loading, Error, Empty, and Success States */}
           {isLoading ? (
             <div
               style={{
@@ -401,7 +401,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* Pagination (9 items per page per B-18) */}
+              {/* Pagination */}
               <Pagination
                 currentPage={pageParam}
                 totalPages={totalPages}

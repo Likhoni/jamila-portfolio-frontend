@@ -16,7 +16,7 @@ import { formatDate } from '../../utils/formatDate';
 
 export default function Overview() {
   useEffect(() => {
-    document.title = 'Owner Studio Overview — DevFolio';
+    document.title = 'Studio Overview — Jamila Islam Likhoni';
   }, []);
 
   const {

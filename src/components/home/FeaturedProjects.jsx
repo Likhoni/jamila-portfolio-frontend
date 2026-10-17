@@ -9,7 +9,7 @@ import { useAuth } from '../../context/AuthContext';
 
 export default function FeaturedProjects({ projects = [] }) {
   const { isOwner } = useAuth();
-  // Exactly 3 featured projects (Section 9.1)
+  // Display featured projects
   const featured = projects.slice(0, 3);
 
   return (

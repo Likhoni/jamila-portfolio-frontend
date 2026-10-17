@@ -22,7 +22,7 @@ export default function BlogDetail() {
   const { slug } = useParams();
   const { isOwner } = useAuth();
 
-  // Fetch Post Detail (F-9, B-16)
+  // Fetch Post Detail
   const {
     data: post,
     isLoading: isPostLoading,
@@ -37,7 +37,7 @@ export default function BlogDetail() {
     },
   });
 
-  // Fetch Approved Comments (F-9)
+  // Fetch Approved Comments
   const {
     data: comments = [],
     isLoading: isCommentsLoading,
@@ -51,7 +51,7 @@ export default function BlogDetail() {
 
   useEffect(() => {
     if (post?.title) {
-      document.title = `${post.title} — DevFolio Blog`;
+      document.title = `${post.title} — Jamila Islam Likhoni`;
     }
   }, [post]);
 
@@ -70,7 +70,7 @@ export default function BlogDetail() {
     );
   }
 
-  // Acceptance test 4: Draft returns 404 for visitors, rendered properly here
+  // Not found or draft state for visitors
   if (isPostError || !post) {
     return (
       <PageContainer>
@@ -220,7 +220,7 @@ export default function BlogDetail() {
               fontSize: '17px',
               lineHeight: 1.75,
               color: 'var(--text-secondary)',
-              maxWidth: '72ch', // Section 9.1: max ~72 characters per line
+              maxWidth: '72ch', // Optimal reading measure
               margin: '0 auto var(--space-48) auto',
             }}
           >
@@ -249,7 +249,7 @@ export default function BlogDetail() {
             </div>
           )}
 
-          {/* Action Row: Optimistic Like Button + Share Bar (F-9) */}
+          {/* Action Row: Like Button + Share Bar */}
           <div
             className="glass-card"
             style={{
@@ -286,7 +286,7 @@ export default function BlogDetail() {
               Comments ({comments.length})
             </h3>
 
-            {/* Comment Form (F-9, F-10) */}
+            {/* Comment Form */}
             <div style={{ marginBottom: 'var(--space-32)' }}>
               <CommentForm slug={post.slug} />
             </div>

@@ -63,7 +63,7 @@ export default function PostFilters({
           />
         </div>
 
-        {/* Ordering Dropdown (F-8: Newest / Most viewed / Most liked / A-Z) */}
+        {/* Ordering Dropdown */}
         <div style={{ minWidth: '180px' }}>
           <select
             value={ordering}

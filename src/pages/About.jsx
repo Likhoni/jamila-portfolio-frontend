@@ -172,7 +172,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Education Milestones (B-5) */}
+      {/* Education Milestones */}
       <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: 'var(--space-48)' }}>
