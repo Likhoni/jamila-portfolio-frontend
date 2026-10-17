@@ -27,7 +27,7 @@ export default function Projects() {
   const debouncedSearch = useDebounce(searchInput, 400);
 
   useEffect(() => {
-    document.title = 'Projects & Portfolio — Rifat Hasan';
+    document.title = 'Projects & Portfolio — Jamila Islam Likhoni';
   }, []);
 
   // Sync debounced search to URL query string

@@ -25,7 +25,7 @@ export default function Blog() {
   const debouncedSearch = useDebounce(searchInput, 400);
 
   useEffect(() => {
-    document.title = 'Engineering Blog & Technical Insights — Rifat Hasan';
+    document.title = 'Engineering Blog & Technical Insights — Jamila Islam Likhoni';
   }, []);
 
   // Sync debounced search to URL query string (F-8)

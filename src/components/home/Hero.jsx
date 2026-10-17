@@ -5,9 +5,9 @@ import { Github, Linkedin, Twitter } from '../ui/SocialIcons';
 import Button from '../ui/Button';
 
 export default function Hero({ profile }) {
-  const name = profile?.full_name || 'Rifat Hasan';
-  const headline = profile?.headline || 'Senior Full-Stack Engineer & System Architect';
-  const bio = profile?.bio || 'Building reliable, high-throughput web applications with Django REST Framework, React, and cloud architectures.';
+  const name = profile?.full_name || 'Jamila Islam Likhoni';
+  const headline = profile?.headline || 'Software Engineer | Laravel & Backend Developer';
+  const bio = profile?.bio || 'Passionate and self-motivated Software Engineer dedicated to building secure, scalable web applications, RESTful APIs, and efficient database architectures with Laravel, PHP, and MySQL.';
   const isAvailable = profile?.is_available_for_hire ?? true;
 
   return (

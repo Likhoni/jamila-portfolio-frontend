@@ -21,7 +21,7 @@ export default function Contact() {
   const [fieldErrors, setFieldErrors] = useState({});
 
   useEffect(() => {
-    document.title = 'Contact & Inquiries — Rifat Hasan';
+    document.title = 'Contact & Inquiries — Jamila Islam Likhoni';
   }, []);
 
   const { data: profile } = useQuery({

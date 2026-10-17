@@ -19,7 +19,7 @@ import { postsApi } from '../api/posts';
 export default function Home() {
   // Dynamic Document Title and SEO (F-16)
   useEffect(() => {
-    document.title = 'Rifat Hasan — Senior Full-Stack Engineer & Cloud Architect';
+    document.title = 'Jamila Islam Likhoni — Software Engineer & Laravel Developer';
   }, []);
 
   const { data: profile, isLoading: isProfileLoading } = useQuery({

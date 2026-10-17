@@ -164,7 +164,7 @@ export default function Footer({ profile }) {
           }}
         >
           <div>
-            © {currentYear} {profile?.full_name || 'Rifat Hasan'}. All rights reserved. Built with React & Django REST Framework.
+            © {currentYear} {profile?.full_name || 'Jamila Islam Likhoni'}. All rights reserved. Built with React & Django REST Framework.
           </div>
           <div style={{ display: 'flex', gap: 'var(--space-16)' }}>
             <span>Direction D: Soft Modern Gradient</span>

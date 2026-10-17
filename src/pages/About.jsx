@@ -15,7 +15,7 @@ import { skillsApi } from '../api/skills';
 
 export default function About() {
   useEffect(() => {
-    document.title = 'About & Qualifications — Rifat Hasan';
+    document.title = 'About & Qualifications — Jamila Islam Likhoni';
   }, []);
 
   const { data: profile, isLoading: isProfileLoading } = useQuery({
@@ -60,7 +60,7 @@ export default function About() {
               Full Biography & Background
             </Badge>
             <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: 'var(--space-16)' }}>
-              About <span className="gradient-text">{profile?.full_name || 'Rifat Hasan'}</span>
+              About <span className="gradient-text">{profile?.full_name || 'Jamila Islam Likhoni'}</span>
             </h1>
             <p style={{ fontSize: 'var(--text-lg)', color: 'var(--text-secondary)' }}>
               {profile?.headline || 'Senior Full-Stack Developer & Cloud Architect'}
